@@ -6,6 +6,7 @@ import SwiperCore, { Autoplay, EffectCoverflow, Lazy, Navigation } from 'swiper'
 
 import GSIcon from '~/components/gs-icon'
 import isBrowser from '~/components/functions/is-browser'
+import HomeBannerSlider from '~/components/constants/homeBannerSlider'
 
 SwiperCore.use([Autoplay, EffectCoverflow, Lazy, Navigation])
 const BannerSlider = ({
@@ -16,25 +17,24 @@ const BannerSlider = ({
     },
   ],
 }) => {
-  const [bannerSlides, setBannerSlides] = useState([])
+  const [bannerSlides, setBannerSlides] = useState([]),
+    { slides } = HomeBannerSlider()
 
   useEffect(() => {
     if (isBrowser) {
-      bannerSlider &&
+      slides &&
         setBannerSlides(
-          bannerSlider.map(
+          slides.nodes.map(
             (
               {
-                image: {
-                  url,
-                  localImage: {
-                    childImageSharp: {
-                      gatsbyImageData: { width, height },
-                    },
+                poster: {
+                  asset: {
+                    gatsbyImageData: { width },
+                    url,
                   },
                 },
-                link,
-                title,
+                tagline,
+                bannerLink,
               },
               index
             ) => (
@@ -46,8 +46,8 @@ const BannerSlider = ({
                 }) =>
                   isActive && (
                     <Link
-                      to={link}
-                      title={title}
+                      to={bannerLink}
+                      title={tagline}
                       className={'slide-link'}
                       style={{ backgroundImage: `url(${url})` }}
                     />
@@ -59,6 +59,7 @@ const BannerSlider = ({
         )
     }
   }, [bannerSlider])
+  console.log(slides)
 
   return (
     <div className={'flex-grow-1 text-xl-left text-center banner-slider'}>

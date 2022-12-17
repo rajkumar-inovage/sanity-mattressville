@@ -22,8 +22,10 @@ import Login from './login'
 import Register from './register'
 import ExtendedBanner from './extended-banner'
 
+
 const Header = () => {
   const { topHeader, middleHeader, mainMenu } = HeaderData(),
+    
     countQuantity = lineItems => {
       let quantity = 0
       lineItems.forEach(item => {
