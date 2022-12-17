@@ -1,0 +1,454 @@
+@media (min-width: 0) {
+  .flyer {
+    .side-bar {
+      width: 100%;
+      margin-right: 20px;
+
+      .bread-crumb {
+        align-items: center;
+        display: flex;
+        margin: 23px 0;
+        .home {
+          color: #535353;
+          font-weight: 700;
+          white-space: nowrap;
+        }
+
+        span {
+          color: #535353;
+          font-size: 16px;
+        }
+      }
+
+      .filters-wrapper {
+        &.mobile-display {
+          display: block;
+          .show {
+            border-radius: 15px;
+          }
+        }
+
+        &.desktop-display {
+          display: none;
+        }
+        .header {
+          background-color: #535353;
+          border-radius: 15px 15px 0 0;
+          padding: 22px 0 20px;
+
+          h2 {
+            color: #ffffff;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+        .accordion {
+          border-radius: 0 0 15px 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+          .card {
+            border-bottom: 1px solid #ff5c7b;
+            .toggle-button {
+              display: flex;
+              padding: 20px 32px 20px 30px;
+              background-color: #ffffff;
+              border: none;
+              align-items: center;
+
+              .heading {
+                color: #535353;
+                text-align: left;
+                text-decoration: none;
+              }
+            }
+            &:first-child {
+              .toggle-button {
+                padding: 30px 32px 20px 30px;
+              }
+            }
+            &:last-child {
+              border-radius: 0 0 15px 15px;
+              border-bottom: none;
+
+              .toggle-button {
+                padding: 20px 30px 33px 30px;
+              }
+            }
+
+            .child-link {
+              .heading {
+                color: #535353;
+                text-align: left;
+                text-decoration: none;
+                padding: 0 30px 20px 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .product-main {
+      .main-heading {
+        font-weight: 700;
+        font-size: 25px;
+        color: #535353;
+        margin: 20px 0;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          width: 80px;
+          position: absolute;
+          border-bottom: 2px solid #ff5c7b;
+          left: 0;
+          bottom: -5px;
+        }
+      }
+      .img-section {
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .header-box {
+        display: flex;
+        align-items: center;
+        background: #f1f3f4;
+        box-sizing: border-box;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        justify-content: space-around;
+        padding: 20px 10px;
+        margin-bottom: 30px;
+
+        .link {
+          background-color: transparent;
+          border: none;
+          color: #535353;
+          display: inline-block;
+          font-size: 12px;
+          line-height: 14px;
+          padding: 0 10px;
+          position: relative;
+          text-decoration: none;
+          text-transform: uppercase;
+          text-overflow: ellipsis;
+          white-space: pre;
+          overflow: hidden;
+
+          &.active {
+            font-weight: 700;
+          }
+        }
+        a{
+          color: #535353;
+          font-size: 12px;
+          line-height: 14px;
+          text-transform: uppercase;
+          text-overflow: ellipsis;
+          white-space: pre;
+          text-decoration: none;
+        }
+      }
+
+      .c-zoom-in {
+        cursor: zoom-in;
+      }
+
+      .card-container {
+        background: #ffffff;
+        border: 1px solid #f1f3f4;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        margin-bottom: 20px;
+
+        .cashcoupon-img {
+          margin: 20px;
+          width: 100%;
+        }
+
+        .card-content {
+          margin: 20px 20px 10px;
+
+          .card-heading {
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #535353;
+          }
+
+          .card-para {
+            margin-right: 5px;
+            font-size: 12px;
+            line-height: 20px;
+            color: #535353;
+
+            strong {
+              font-weight: 700;
+            }
+          }
+
+          .btn {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            background: #ff5c7b;
+            border-radius: 89.5709px;
+            margin-right: 20px;
+            width: 100%;
+            max-width: 320px;
+
+            .btn-text {
+              font-weight: 700;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      .welcome-text{
+        margin-bottom:50px;
+        p{
+          color:#535353;
+          font-size:26px;
+          line-height: 30px;
+        }
+        .welcome-btn{
+            margin-top:50px;
+          a{
+            color: #fff;
+            background-color: #ff5c7b;
+            border-radius: 30px;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 0px 10px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .cta-section {
+      background-color: #eff9f9;
+      padding: 20px 0;
+
+      .cta-left {
+        align-items: center;
+        color: #535353;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        margin-bottom: 20px;
+
+        .left-area-img {
+          border-radius: 15px;
+        }
+
+        .label {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 28px;
+          margin-top: 30px;
+        }
+      }
+
+      .cta-right {
+        align-items: center;
+        color: #535353;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+
+        .label {
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 28px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .flyer {
+    .product-main {
+      .main-heading {
+        font-size: 25px;
+        margin: 23px 200px 30px 0;
+      }
+
+      .card-container {
+        display: flex;
+        flex-direction: column;
+      }
+      .welcome-text{
+        .welcome-btn{
+          a{
+            padding: 15px 25px;
+            font-size:16px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .flyer {
+    .product-main {
+      .header-box {
+        display: flex;
+
+        .link {
+          padding-right: 10px;
+          overflow: visible;
+
+          // &:not(:last-child)::after {
+          //   content: '';
+          //   border-right: 1px solid #535353;
+          //   position: absolute;
+          //   height: 20px;
+          //   right: -15px;
+          //   top: 50%;
+          //   transform: translateY(-50%);
+          // }
+        }
+      }
+
+      .card-container {
+        display: flex;
+        flex-direction: row;
+
+        .card-content {
+          .card-heading {
+            font-size: 16px;
+          }
+
+          .card-para {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .flyer {
+    .side-bar {
+      width: 300px;
+      .filters-wrapper {
+        &.mobile-display {
+          display: none;
+        }
+
+        &.desktop-display {
+          display: block;
+        }
+      }
+    }
+
+    .product-main {
+      .header-box {
+        align-items: center;
+        background: #f1f3f4;
+        box-sizing: border-box;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border-radius: 15px;
+        justify-content: space-around;
+        padding: 20px 10px;
+
+        .link {
+          color: #535353;
+          display: inline-block;
+          font-size: 12px;
+          line-height: 14px;
+          padding: 0 10px;
+          position: relative;
+          text-decoration: none;
+          text-transform: uppercase;
+          text-overflow: ellipsis;
+          white-space: pre;
+          overflow: hidden;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .main-heading {
+        font-size: 30px;
+      }
+
+      .card-container {
+        .card-content {
+          margin: 20px;
+
+          .card-heading {
+            font-size: 14px;
+          }
+
+          .card-para {
+            font-size: 10px;
+          }
+
+          .btn {
+            margin-right: 20px;
+          }
+        }
+      }
+      .welcome-text{
+        margin-bottom:0px;
+      }
+    }
+
+    .cta-section {
+      .cta-left {
+        margin-right: 80px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .flyer {
+    .product-main {
+      .header-box {
+        display: flex;
+
+        .link {
+          padding-right: 10px;
+          overflow: visible;
+        }
+      }
+
+      .main-heading {
+        font-size: 36px;
+      }
+
+      .card-container {
+        .card-content {
+          .card-heading {
+            font-size: 18px;
+          }
+
+          .card-para {
+            font-size: 14px;
+          }
+
+          .btn {
+            display: flex;
+            max-width: unset;
+          }
+        }
+      }
+    }
+  }
+}

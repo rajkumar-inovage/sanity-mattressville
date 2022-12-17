@@ -1,0 +1,59 @@
+[build]
+  command = "npm run build"
+
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=2592000, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    Content-Security-Policy = "img-src * data: blob: 'unsafe-inline';"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Cross-Origin-Embedder-Policy-Report-Only = 'require-corp; report-to="default"'
+    Cross-Origin-Opener-Policy-Report-Only = 'same-origin; report-to="default"'
+    Cross-Origin-Resource-Policy = "same-site"
+    Expect-CT = "enforce, max-age=30"
+    Feature-Policy = "*"
+    X-XSS-Protection = "1"
+    X-Permitted-Cross-Domain-Policies = "none"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800, must-revalidate"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.mp4"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"

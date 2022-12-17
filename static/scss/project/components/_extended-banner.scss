@@ -1,0 +1,32 @@
+@media (min-width: 0) {
+  .extended-banner {
+    width: 100%;
+    background-color: #ff5c7b;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    padding: 15px 20px;
+    .extended-banner-content{
+      align-items: center;
+      justify-content: center;
+      p{
+        margin: 0;
+      }
+      button {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 10px;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+    }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .extended-banner {
+    padding: 10px 0;
+  }
+}

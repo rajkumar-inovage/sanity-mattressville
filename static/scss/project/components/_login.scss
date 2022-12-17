@@ -1,0 +1,82 @@
+@media (min-width: 0) {
+    .login-box {
+        width: 100%;
+        max-width: 400px;
+        margin: 0px auto;
+        .field {
+            input {
+                width: 100%;
+                border: 1px solid #000;
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+            input:focus {
+                outline: none;
+                box-shadow: none;
+            }
+            .btn-submit{
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                background-color: #ff5c7b;
+                border-radius: 89.5709px;
+                border: none;
+                color: #ffffff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                font-size: 16px;
+                font-weight: 700;
+                height: 45px;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                letter-spacing: 0.05em;
+                line-height: 19px;
+                padding: 0;
+                width: 176px;
+            }
+            .btn-back{
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                background-color: #ff5c7b;
+                border-radius: 89.5709px;
+                border: none;
+                color: #ffffff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                font-size: 16px;
+                font-weight: 700;
+                height: 45px;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                letter-spacing: 0.05em;
+                line-height: 19px;
+                padding: 0;
+                width: 176px; 
+            }
+            .btn-forgot{
+                color: #098fc7;
+                background-color: transparent;
+                border: none;
+                font-size: 16px;
+                line-height: 19px;
+                padding: 0;
+                margin-top:15px;
+            }
+            .btn-back.dismiss.flex-shrink-1 {
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+
+}

@@ -1,0 +1,93 @@
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+@if $enable-grid-classes {
+  // Single container class with breakpoint max-widths
+  .container,
+  // 100% wide container at all breakpoints
+  .container-fluid {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    @media (min-width: map-get($grid-breakpoints, 'xl')) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @media (min-width: 1440px) {
+      padding-right: 90px;
+      padding-left: 90px;
+      max-width: 1440px;
+    }
+  }
+
+  // Responsive containers that are 100% wide until a breakpoint
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    .container-#{$breakpoint} {
+      @extend .container-fluid;
+    }
+
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      %responsive-container-#{$breakpoint} {
+        max-width: $container-max-width;
+      }
+
+      // Extend each breakpoint which is smaller or equal to the current breakpoint
+      $extend-breakpoint: true;
+
+      @each $name, $width in $grid-breakpoints {
+        @if ($extend-breakpoint) {
+          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            @extend %responsive-container-#{$breakpoint};
+          }
+
+          // Once the current breakpoint is reached, stop extending
+          @if ($breakpoint == $name) {
+            $extend-breakpoint: false;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Row
+//
+// Rows contain your columns.
+
+@if $enable-grid-classes {
+  .row {
+    @include make-row();
+  }
+
+  // Remove the negative margin from default .row, then the horizontal padding
+  // from all immediate children columns (to prevent runaway style inheritance).
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*='col-'] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}

@@ -1,0 +1,203 @@
+@media (min-width: 0) {
+    .sales-n-deals{
+        a{
+            img{
+                border-radius: 15px;
+                overflow: hidden;
+            }
+        }
+    }
+    .description-section {
+        margin-bottom: 20px;
+    }
+
+    .description-section p,
+    .description-section span {
+        font-size: 16px;
+        line-height: 24px;
+        color: #535353;
+        margin-bottom: 0;
+    }
+
+    body .product-category .product-main .products .box {
+        position: relative;
+        overflow: unset;
+    }
+
+    body .product-category .product-main .products .box .btn-shop {
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .ribbon {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        z-index: 1;
+        overflow: hidden;
+        width: 75px;
+        height: 75px;
+        text-align: right;
+    }
+
+    .ribbon span {
+        font-size: 10px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        background: #79a70a;
+        background: linear-gradient(#f70505 0%, #8f0808 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 19px;
+        right: -21px;
+    }
+
+    .ribbon span::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 100%;
+        z-index: -1;
+        border-left: 3px solid #8f0808;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid #8f0808;
+    }
+
+    .ribbon span::after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 100%;
+        z-index: -1;
+        border-left: 3px solid transparent;
+        border-right: 3px solid #8f0808;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid #8f0808;
+    }
+
+    /* Green Ribbon */
+    .ribbon.green-bg span {
+        background: #79a70a;
+        background: linear-gradient(#9bc90d 0%, #79a70a 100%);
+    }
+
+    .ribbon.green-bg span::before {
+        border-left: 3px solid #79a70a;
+        border-top: 3px solid #79a70a;
+    }
+
+    .ribbon.green-bg span::after {
+        border-right: 3px solid #79a70a;
+        border-top: 3px solid #79a70a;
+    }
+
+    /* Orange Ribbon */
+    .ribbon.orange-bg span {
+        background: #8f5408;
+        background: linear-gradient(#f79e05 0%, #8f5408 100%);
+    }
+
+    .ribbon.orange-bg span::before {
+        border-left: 3px solid #8f5408;
+        border-top: 3px solid #8f5408;
+    }
+
+    .ribbon.orange-bg span::after {
+        border-right: 3px solid #8f5408;
+        border-top: 3px solid #8f5408;
+    }
+
+    /* Purple Ribbon */
+    .ribbon.purple-bg span {
+        background: #660066;
+        background: linear-gradient(#b300b2 0%, #660066 100%);
+    }
+
+    .ribbon.purple-bg span::before {
+        border-left: 3px solid #660066;
+        border-top: 3px solid #660066;
+    }
+
+    .ribbon.purple-bg span::after {
+        border-right: 3px solid #660066;
+        border-top: 3px solid #660066;
+    }
+
+    /*Black Ribbon */
+    .ribbon.black-bg span {
+        background: #000000;
+        background: linear-gradient(#36454f 0%, #000000 100%);
+    }
+
+    .ribbon.black-bg span::before {
+        border-left: 3px solid #000000;
+        border-top: 3px solid #000000;
+    }
+
+    .ribbon.black-bg span::after {
+        border-right: 3px solid #000000;
+        border-top: 3px solid #000000;
+    }
+
+    /*Light Blue Ribbon */
+    .ribbon.light-blue-bg span {
+        background: #1e5799;
+        background: linear-gradient(#86cefa 0%, #86cefa 100%);
+    }
+
+    .ribbon.light-blue-bg span::before {
+        border-left: 3px solid #86cefa;
+        border-top: 3px solid #86cefa;
+    }
+
+    .ribbon.light-blue-bg span::after {
+        border-right: 3px solid #86cefa;
+        border-top: 3px solid #86cefa;
+    }
+
+    .ribbon.blue-navy-bg span {
+        background: #2989d8;
+        background: linear-gradient(#2989d8 0%, #1e5799 100%);
+    }
+
+    .ribbon.blue-navy-bg span::before {
+        border-left: 3px solid #2989d8;
+        border-top: 3px solid #2989d8;
+    }
+
+    .ribbon.blue-navy-bg span::after {
+        border-right: 3px solid #2989d8;
+        border-top: 3px solid #2989d8;
+    }
+
+    /*Yellow Ribbon */
+    .ribbon.yellow-bg span {
+        background: #ffbf00;
+        background: linear-gradient(#ffff00 0%, #ffbf00 100%);
+    }
+
+    .ribbon.yellow-bg span::before {
+        border-left: 3px solid #ffbf00;
+        border-top: 3px solid #ffbf00;
+    }
+
+    .ribbon.yellow-bg span::after {
+        border-right: 3px solid #ffbf00;
+        border-top: 3px solid #ffbf00;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .blogs-main .content p a img,
+    .blogs-main .content p img,
+    .blogs-main .content img {
+        width: 100%;
+        height: auto;
+    }
+}
